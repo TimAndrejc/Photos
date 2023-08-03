@@ -7,4 +7,11 @@
 .text-gray {
     color: #9c9c9c; /* Darkish gray color */
   }
-  
+.linker {
+  color : #9c9c9c;
+}
+
+a:hover {
+  color: #9c9c9c;
+}
+

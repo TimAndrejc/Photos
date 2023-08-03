@@ -13,8 +13,16 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
     $email = trim($email);
     $email = strip_tags($email);
     $email = stripslashes($email);
-
-    $query = "SELECT * FROM users WHERE email=?";
+    
+    $query = "SELECT * FROM users WHERE email=? AND confirmed = 0";
+    $stmt = $pdo->prepare($query);
+    $stmt->execute([$email]);
+    if($stmt->rowCount() == 1){
+        header('Location:login.php?notConfirmed=true');
+        exit();
+    }
+    
+    $query = "SELECT * FROM users WHERE email=? AND confirmed = 1";
     $stmt = $pdo->prepare($query);
     $stmt->execute([$email]);
     if ($stmt->rowCount() == 1) {

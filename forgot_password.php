@@ -6,7 +6,10 @@ if(!isset($_POST['email'])) {
 }
 try{
 $email = $_POST['email'];
-$sender= "From: your@mail.com";
+$mailHead = implode("\r\n", [
+  "MIME-Version: 1.0",
+  "Content-type: text/html; charset=utf-8"
+]);
 $token = md5(uniqid(rand(), true));
 $token = substr($token, 0, 10);
 $token = $token . time();
