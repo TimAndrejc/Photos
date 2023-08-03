@@ -15,3 +15,6 @@ a:hover {
   color: #9c9c9c;
 }
 
+.pointer:hover {
+  cursor: pointer;
+}

@@ -13,6 +13,10 @@ if(isset($_GET['remove'])){
     header('location:friends.php');
 }
 
+$query = "SELECT token FROM confirmation WHERE user_id = ?";
+$stmt = $pdo->prepare($query);
+$stmt->execute([$_SESSION['id']]);
+$addCode = $stmt->fetch();
 
 ?>
 <section class="intro text-gray" style="margin-top:10px;">
@@ -62,10 +66,24 @@ if(isset($_GET['remove'])){
     </div>
   
   </div>
+  <span class="pointer">
+  <a class="linker" onClick="copyFriendLink()" style="text-align:center">Copy friend link</a>
+  </span>
 </div>
 </div>
 </section>
-
+<script>
+function copyFriendLink() {
+  var copyText = "http://localhost/Photos/add_friend.php?friend=<?php echo $addCode['token']; ?>";
+  navigator.clipboard.writeText(copyText);
+  Swal.fire({
+  title: 'Copied!',
+  text: 'Your friend link has been copied to your clipboard.',
+  icon: 'success',
+  timer: 2000,
+  })
+}
+</script>
 <?php
 include_once("footer.php");
 ?>
