@@ -1,0 +1,36 @@
+/* Default font size for larger screens (PC) */
+.custom-navbar {
+    font-size: 16px;
+    padding: 15px 10px;
+  }
+  
+  /* Font size for mobile devices */
+  @media (max-width: 991px) {
+    .custom-navbar {
+      font-size: 45px;
+    }
+  
+    .custom-navbar .navbar-brand {
+      font-size: 60px;
+      margin-left: 2%;
+    }
+  
+    .custom-navbar .navbar-toggler-icon {
+      font-size: 50px;
+    }
+  
+    .custom-navbar .nav-link {
+      margin-left: 2%;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .navbar-nav.ml-auto {
+      margin-left: auto;
+    }
+  }
+  /* Custom styles for the darkish gray theme */
+.text-gray {
+    color: #9c9c9c; /* Darkish gray color */
+  }
+  
