@@ -14,7 +14,10 @@
 a:hover {
   color: #9c9c9c;
 }
-
+.pointer{
+  display:inherit;
+  text-align: center;
+}
 .pointer:hover {
   cursor: pointer;
 }

@@ -33,6 +33,10 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
             if($user['admin'] == 1) {
                 $_SESSION['admin'] = 1;
             }
+            if(isset($_POST['friend'])){
+                header("Location:add_friend.php?friend=".$_POST['friend'].'&prijava=success');
+                die();
+            }
             header("Location: index.php?prijava=success");
             die();
         }

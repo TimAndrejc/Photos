@@ -13,6 +13,7 @@ if(isset($_GET['remove'])){
     header('location:friends.php');
 }
 
+require_once 'modals/add_friend_modal.php';
 $query = "SELECT token FROM confirmation WHERE user_id = ?";
 $stmt = $pdo->prepare($query);
 $stmt->execute([$_SESSION['id']]);

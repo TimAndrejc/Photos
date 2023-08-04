@@ -44,6 +44,11 @@ if(isset($_GET['notConfirmed'])){
                     <input type="password" id="typePassword" placeholder="Enter your password" name="password" class="form-control form-control-lg active text-gray" />
                     <label class="form-label text-gray" for="typePassword">Password</label>
                   </div>
+                  <?php
+                  if(isset($_GET['friend'])){
+                    echo '<input type="hidden" name="friend" value="'.$_GET['friend'].'">';
+                  }
+                  ?>
                   <div class="text-center py-5"  style="padding:5px !important">
                     <button class="btn btn-light btn-lg btn-rounded px-5" type="submit">Login</button>
                   </div>
