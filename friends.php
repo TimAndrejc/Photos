@@ -14,18 +14,36 @@ if(isset($_GET['remove'])){
 }
 
 require_once 'modals/add_friend_modal.php';
+require_once 'modals/friend_requests_modal.php';
 $query = "SELECT token FROM confirmation WHERE user_id = ?";
 $stmt = $pdo->prepare($query);
 $stmt->execute([$_SESSION['id']]);
 $addCode = $stmt->fetch();
 
+if(isset($_GET['confirm'])){
+    $query = "UPDATE friends SET accepted = 1 WHERE user_id = ? AND friend_id = ?";
+    $stmt = $pdo->prepare($query);
+    $stmt->execute([$_GET['confirm'], $_SESSION['id']]);
+    header('location:friends.php?requests=true');
+}
+if(isset($_GET['remove'])){
+    $query = "DELETE FROM friends WHERE user_id = ? AND friend_id = ?";
+    $stmt = $pdo->prepare($query);
+    $stmt->execute([$_GET['remove'], $_SESSION['id']]);
+    header('location:friends.php?requests=true');
+}
 ?>
 <section class="intro text-gray" style="margin-top:10px;">
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-12 col-md-8 col-lg-6 col-xl-5" style="margin-bottom:2rem">
+    
       <div class="card gradient-custom" style="border-radius: 1rem;">
+   
         <div class="card-body p-5" style="padding:0">
+        <div style="text-align: right;">
+        <a href = "friends.php?requests=true" class="btn btn-outline-secondary btn-sm" style="border-radius: 2rem;">Requests</a>
+        </div>
             <div class="text-center pt-1">
             <i class="bi bi-people-fill fa-3x"></i>
               <h1 class="fw-bold  text-uppercase">Friends list</h1>
