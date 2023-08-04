@@ -26,10 +26,10 @@ if(isset($_GET['confirm'])){
     $stmt->execute([$_GET['confirm'], $_SESSION['id']]);
     header('location:friends.php?requests=true');
 }
-if(isset($_GET['remove'])){
+if(isset($_GET['removereq'])){
     $query = "DELETE FROM friends WHERE user_id = ? AND friend_id = ?";
     $stmt = $pdo->prepare($query);
-    $stmt->execute([$_GET['remove'], $_SESSION['id']]);
+    $stmt->execute([$_GET['removereq'], $_SESSION['id']]);
     header('location:friends.php?requests=true');
 }
 ?>

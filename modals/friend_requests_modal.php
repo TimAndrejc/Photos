@@ -88,7 +88,7 @@ if(isset($_GET['requests'])){
             window.location.href = "friends.php?add=requests&confirm="+id;
         }
         function Remove(id){
-         window.location.href = "friends.php?add=requests&remove="+id;
+         window.location.href = "friends.php?add=requests&removereq="+id;
         }
     </script>
 
