@@ -86,7 +86,7 @@ require_once 'connection.php';
                   <label class="form-label text-gray" for="hangoutDate">Date of Hangout</label>
                 </div>
                 <div class="form-outline form-white mb-4">
-                <input type="file" name="albumCover" id="albumCover" class="form-control form-control-lg active text-gray" />
+                <input type="file" name="albumCover" id="albumCover" class="form-control form-control-lg active text-gray" accept=".jpg, .jpeg, .png" />
                 <label class="form-label text-gray" for="albumCover">Album Cover <span style="font-size:12px">(can add later)</span></label>
                 <div class="progress" hidden=true>
                     <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 0;"></div>
