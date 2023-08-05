@@ -21,3 +21,14 @@ a:hover {
 .pointer:hover {
   cursor: pointer;
 }
+.friend-checkbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.friend-checkbox label {
+  margin-right: 10px;
+}
