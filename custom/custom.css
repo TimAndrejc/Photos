@@ -32,3 +32,33 @@ a:hover {
 .friend-checkbox label {
   margin-right: 10px;
 }
+.masonry-container {
+  column-count: 3;
+  column-gap: 1rem;
+}
+
+.masonry-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.image-container {
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+
+       
