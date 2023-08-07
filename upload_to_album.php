@@ -135,7 +135,7 @@ fileInput.addEventListener('change', (event) => {
         formData.append('file', file);
 
         const xhr = new XMLHttpRequest();
-        xhr.open('POST', 'http://slikice.timandrejc.eu/upload', true);
+        xhr.open('POST', 'localhost:3000/upload', true);
 
         xhr.upload.addEventListener('progress', (event) => {
             if (event.lengthComputable) {
