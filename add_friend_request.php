@@ -33,6 +33,10 @@ if(!isset($_POST['username'])){
     $query = "INSERT INTO friends (user_id, friend_id, accepted) VALUES (?, ?, 0)";
     $stmt = $pdo->prepare($query);
     $stmt->execute([$_SESSION['id'], $user['id']]);
+    $mail = $user['email'];
+    $subject = "Friend request";
+    $message = "Hello, ".$_user['username']." has sent you a friend request. You can accept it by logging in to your account.";
+    mail($mail, $subject, $message);
     echo "Friend request sent.";
     exit;
 ?>
