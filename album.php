@@ -55,6 +55,182 @@ $creator = $stmt->fetch(PDO::FETCH_COLUMN);
         <?php
         }
     ?>  
+    <div class="masonry-item">
+            <div class="row">
+                <div class="col-md-12">
+                     <img src="https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg" alt="error" class="image">
+                </div>
+            </div>
+        </div><div class="masonry-item">
+            <div class="row">
+                <div class="col-md-12">
+                     <img src="https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg" alt="error" class="image">
+                </div>
+            </div>
+        </div><div class="masonry-item">
+            <div class="row">
+                <div class="col-md-12">
+                     <img src="https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg" alt="error" class="image">
+                </div>
+            </div>
+        </div>
+        <div class="masonry-item">
+            <div class="row">
+                <div class="col-md-12">
+                     <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/ECurtis.jpg" alt="error" class="image">
+                </div>
+            </div>
+        </div><div class="masonry-item">
+            <div class="row">
+                <div class="col-md-12">
+                     <img src="https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg" alt="error" class="image">
+                </div>
+            </div>
+        </div><div class="masonry-item">
+            <div class="row">
+                <div class="col-md-12">
+                     <img src="https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg" alt="error" class="image">
+                </div>
+            </div>
+        </div><div class="masonry-item">
+            <div class="row">
+                <div class="col-md-12">
+                     <img src="https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg" alt="error" class="image">
+                </div>
+            </div>
+        </div>
+        <div class="masonry-item">
+            <div class="row">
+                <div class="col-md-12">
+                     <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/ECurtis.jpg" alt="error" class="image">
+                </div>
+            </div>
+        </div><div class="masonry-item">
+            <div class="row">
+                <div class="col-md-12">
+                     <img src="https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg" alt="error" class="image">
+                </div>
+            </div>
+        </div><div class="masonry-item">
+            <div class="row">
+                <div class="col-md-12">
+                     <img src="https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg" alt="error" class="image">
+                </div>
+            </div>
+        </div><div class="masonry-item">
+            <div class="row">
+                <div class="col-md-12">
+                     <img src="https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg" alt="error" class="image">
+                </div>
+            </div>
+        </div>
+        <div class="masonry-item">
+            <div class="row">
+                <div class="col-md-12">
+                     <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/ECurtis.jpg" alt="error" class="image">
+                </div>
+            </div>
+        </div><div class="masonry-item">
+            <div class="row">
+                <div class="col-md-12">
+                     <img src="https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg" alt="error" class="image">
+                </div>
+            </div>
+        </div><div class="masonry-item">
+            <div class="row">
+                <div class="col-md-12">
+                     <img src="https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg" alt="error" class="image">
+                </div>
+            </div>
+        </div><div class="masonry-item">
+            <div class="row">
+                <div class="col-md-12">
+                     <img src="https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg" alt="error" class="image">
+                </div>
+            </div>
+        </div>
+        <div class="masonry-item">
+            <div class="row">
+                <div class="col-md-12">
+                     <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/ECurtis.jpg" alt="error" class="image">
+                </div>
+            </div>
+        </div><div class="masonry-item">
+            <div class="row">
+                <div class="col-md-12">
+                     <img src="https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg" alt="error" class="image">
+                </div>
+            </div>
+        </div><div class="masonry-item">
+            <div class="row">
+                <div class="col-md-12">
+                     <img src="https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg" alt="error" class="image">
+                </div>
+            </div>
+        </div><div class="masonry-item">
+            <div class="row">
+                <div class="col-md-12">
+                     <img src="https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg" alt="error" class="image">
+                </div>
+            </div>
+        </div>
+        <div class="masonry-item">
+            <div class="row">
+                <div class="col-md-12">
+                     <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/ECurtis.jpg" alt="error" class="image">
+                </div>
+            </div>
+        </div><div class="masonry-item">
+            <div class="row">
+                <div class="col-md-12">
+                     <img src="https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg" alt="error" class="image">
+                </div>
+            </div>
+        </div><div class="masonry-item">
+            <div class="row">
+                <div class="col-md-12">
+                     <img src="https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg" alt="error" class="image">
+                </div>
+            </div>
+        </div><div class="masonry-item">
+            <div class="row">
+                <div class="col-md-12">
+                     <img src="https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg" alt="error" class="image">
+                </div>
+            </div>
+        </div>
+        <div class="masonry-item">
+            <div class="row">
+                <div class="col-md-12">
+                     <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/ECurtis.jpg" alt="error" class="image">
+                </div>
+            </div>
+        </div><div class="masonry-item">
+            <div class="row">
+                <div class="col-md-12">
+                     <img src="https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg" alt="error" class="image">
+                </div>
+            </div>
+        </div><div class="masonry-item">
+            <div class="row">
+                <div class="col-md-12">
+                     <img src="https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg" alt="error" class="image">
+                </div>
+            </div>
+        </div><div class="masonry-item">
+            <div class="row">
+                <div class="col-md-12">
+                     <img src="https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg" alt="error" class="image">
+                </div>
+            </div>
+        </div>
+        <div class="masonry-item">
+            <div class="row">
+                <div class="col-md-12">
+                     <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/ECurtis.jpg" alt="error" class="image">
+                </div>
+            </div>
+        </div>
     </div>
 </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
