@@ -76,7 +76,7 @@ h1 {
   opacity: 0.55;
 }
 </style>
-
+<form action="push_pictures.php" method="POST">
 <div class="wrapper">
   <div class="container">
     <h1>Upload Images</h1>
@@ -87,12 +87,22 @@ h1 {
           <i class="fas fa-file-alt" data-fa-transform="shrink-2 up-4"></i>
           <i class="fas fa-file-pdf" data-fa-transform="shrink-3 down-2 right-6 rotate-45"></i>
         </div>
-        <input type="file" id="file-upload" class="pointer" style="width:100%; height:20vh;" multiple>
+        <input type="file" id="Pictures" class="pointer" style="width:100%; height:20vh; opacity:0;" multiple>
+        <input type="hidden" id="album" name="album" value="<?php echo $_GET['album'] ?>">
+        <input type="hidden" name="picnames" id="picnames" value="">
         <p> Click or drag images here.</p>
+        <div class="progress" style="display:none;">
+            <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
     </div>
   </div>
-
+  <div class="uploaded-images">
 </div>
+<br>
+<input type="submit" id="submitButton"  class ="btn btn-success" value="Upload" hidden>
+</form>
+</div>
+<br>
 <div style ="text-align:center;"> <a href="album.php?album=<?php echo $_GET['album'] ?>" class="linker">Back to Album</a></div>
 
 
@@ -104,6 +114,78 @@ $("#file-browser").click(function(e) {
   $("#file-upload").trigger("click");
 });
 </script>
+
+<script>
+const fileInput = document.getElementById('Pictures');
+const progressBar = document.querySelector('.progress-bar');
+const prgoresdiv = document.querySelector('.progress');
+const uploadedImagesContainer = document.querySelector('.uploaded-images');
+const picNamesInput = document.getElementById('picnames');
+const submitButton = document.getElementById('submitButton');
+
+
+fileInput.addEventListener('change', (event) => {
+    submitButton.hidden = false;
+    prgoresdiv.hidden = false;
+    const files = event.target.files; // Get all selected files
+    // Loop through each file and upload
+    for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+        const formData = new FormData();
+        formData.append('file', file);
+
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', 'http://slikice.timandrejc.eu/upload', true);
+
+        xhr.upload.addEventListener('progress', (event) => {
+            if (event.lengthComputable) {
+                const percentComplete = (event.loaded / event.total) * 100;
+                console.log('Progress:', percentComplete);
+                progressBar.style.width = percentComplete + '%';
+            }
+        });
+
+        xhr.onload = () => {
+            if (xhr.status === 200) {
+                console.log('File uploaded successfully.');
+                var picname = xhr.responseText;
+                    var picnames = document.getElementById('picnames').value;
+                    if(picnames == ""){
+                        picnames = picname;
+                    }else{
+                        picnames = picnames + "," + picname;
+                    }
+                    document.getElementById('picnames').value = picnames;
+                     const fileContainer = document.createElement('div');
+                fileContainer.classList.add('uploaded-file');
+                fileContainer.innerHTML = `
+                    <span class="filename">${file.name}</span>
+                    <span class="remove-icon">x</span>
+                `;
+
+                // Add click event to remove icon
+                const removeIcon = fileContainer.querySelector('.remove-icon');
+                removeIcon.addEventListener('click', () => {
+                    uploadedImagesContainer.removeChild(fileContainer);
+                    const updatedPicNames = picNamesInput.value.split(',').filter(name => name !== picname).join(',');
+                    picNamesInput.value = updatedPicNames;
+                });
+
+                uploadedImagesContainer.appendChild(fileContainer);
+            } else {
+                console.log('File upload failed.');
+            }
+        };
+
+        xhr.send(formData);
+    }
+
+    prgoresdiv.hidden = true;
+});
+
+    </script>
+
+
 
 <?php
 include_once("footer.php");
