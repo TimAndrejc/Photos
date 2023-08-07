@@ -32,6 +32,10 @@ a:hover {
 .friend-checkbox label {
   margin-right: 10px;
 }
+.masonry-container-i {
+  column-count: 3;
+  
+}
 .masonry-container {
   column-count: 3;
   
@@ -75,6 +79,9 @@ a:hover {
 }
 @media (max-width: 767px) {
 
+  .masonry-container-i {
+    column-count: 1;
+  }
   .masonry-container {
     column-count: 2;
   }

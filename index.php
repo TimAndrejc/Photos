@@ -9,7 +9,7 @@ if(!isset($_SESSION['id'])){
 <h2>Hello <?php echo $_SESSION['username'] ?>!</h2>
 
  <div class="container" style ="margin-top:10px; text-align: -webkit-center;">
-    <div class="masonry-container">
+    <div class="masonry-container-i">
 <?php
     require_once 'connection.php';
     $query = "SELECT * FROM album_user a INNER JOIN albums u ON u.id = a.album_id WHERE user_id = ? ORDER BY date_of_hangout DESC";
